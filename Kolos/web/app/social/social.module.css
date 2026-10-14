@@ -1,0 +1,222 @@
+@reference "../globals.css";
+
+/* Główne kontenery */
+.pageWrapper {
+  @apply min-h-screen bg-[#111315] text-white p-4 md:p-8 bg-[radial-gradient(circle_at_top_right,#3a3500,transparent_35%)];
+}
+.pageContainer {
+  @apply max-w-2xl mx-auto;
+}
+.header {
+  @apply mb-10;
+}
+.title {
+  @apply text-4xl md:text-5xl font-bold mb-3;
+}
+.subtitle {
+  @apply text-gray-400 text-lg;
+}
+.section {
+  @apply mb-10;
+}
+.feedContainer {
+  @apply flex flex-col gap-6;
+}
+
+/* Karta (Post / Formularz) */
+.card {
+  @apply rounded-3xl border border-neutral-800 bg-[#1b1e21] p-6 md:p-8 transition-all duration-300 hover:border-neutral-700;
+}
+
+/* Formularz */
+.form {
+  @apply flex flex-col gap-4;
+}
+.textarea {
+  @apply w-full resize-none rounded-2xl border border-neutral-800 bg-[#151719] p-5 text-white placeholder-gray-500 focus:border-yellow-400 focus:outline-none focus:ring-1 focus:ring-yellow-400 transition-colors;
+}
+.buttonRow {
+  @apply flex justify-between items-center mt-2;
+}
+.btn {
+  @apply rounded-xl px-5 py-3 font-bold transition-all cursor-pointer;
+}
+.btnSecondary {
+  @apply border border-neutral-800 bg-[#202428] text-white hover:bg-[#2a2f34];
+}
+.btnPrimary {
+  @apply bg-yellow-400 text-black hover:bg-yellow-300 hover:shadow-[0_10px_30px_rgba(250,204,21,0.12)];
+}
+.btn:disabled {
+  @apply opacity-50 cursor-not-allowed hover:shadow-none hover:bg-yellow-400 hover:border-neutral-800;
+}
+
+/* Elementy posta */
+.postHeader {
+  @apply flex items-center gap-4 mb-6;
+}
+.avatar {
+  @apply w-12 h-12 rounded-full bg-yellow-400 text-black flex items-center justify-center font-bold text-xl flex-shrink-0;
+}
+.authorInfo {
+  @apply flex flex-col;
+}
+.authorName {
+  @apply font-bold text-lg text-white;
+}
+.timeText {
+  @apply text-gray-400 text-sm;
+}
+.postContent {
+  @apply text-gray-200 leading-relaxed mb-6 whitespace-pre-wrap text-lg;
+}
+.workoutBadge {
+  @apply rounded-2xl border border-neutral-800 bg-gradient-to-br from-[#202428] to-[#151719] p-5 mb-6 flex items-center gap-4 text-yellow-400 font-semibold;
+}
+.actionRow {
+  @apply flex gap-6 border-t border-neutral-800 pt-5;
+}
+.actionBtn {
+  @apply flex items-center gap-2 text-gray-400 hover:text-yellow-400 transition-colors font-semibold cursor-pointer;
+}
+.btnActive {
+  @apply text-yellow-400;
+}
+
+/* Sekcja komentarzy (doklej na dole) */
+.commentsSection {
+  @apply mt-6 pt-6 border-t border-neutral-800 flex flex-col gap-6;
+}
+.commentForm {
+  @apply flex gap-3;
+}
+.commentInput {
+  @apply flex-1 resize-none rounded-xl border border-neutral-800 bg-[#151719] px-4 py-3 text-white placeholder-gray-500 focus:border-yellow-400 focus:outline-none focus:ring-1 focus:ring-yellow-400 transition-colors text-sm;
+}
+.commentSubmitBtn {
+  @apply rounded-xl bg-yellow-400 px-4 py-2 font-bold text-black transition-all hover:bg-yellow-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center;
+}
+.commentsList {
+  @apply flex flex-col gap-4;
+}
+.commentItem {
+  @apply flex gap-3;
+}
+.commentAvatar {
+  @apply w-8 h-8 rounded-full bg-neutral-700 text-white flex items-center justify-center font-bold text-xs flex-shrink-0;
+}
+.commentBubble {
+  @apply flex-1 bg-[#202428] rounded-2xl rounded-tl-none p-4;
+}
+.commentAuthorRow {
+  @apply flex items-center justify-between mb-1;
+}
+.commentAuthor {
+  @apply font-bold text-sm text-yellow-400;
+}
+.commentTime {
+  @apply text-xs text-gray-500;
+}
+.commentText {
+  @apply text-gray-200 text-sm whitespace-pre-wrap;
+}
+.loadingText {
+  @apply text-gray-500 text-sm text-center py-2;
+}
+
+/* --- SKELETON LOADING --- */
+.skeletonCard {
+  @apply rounded-3xl border border-neutral-800 bg-[#1b1e21] p-6 md:p-8 animate-pulse flex flex-col gap-6;
+}
+.skeletonHeader {
+  @apply flex items-center gap-4;
+}
+.skeletonAvatar {
+  @apply w-12 h-12 rounded-full bg-neutral-800 flex-shrink-0;
+}
+.skeletonTextWrap {
+  @apply flex flex-col gap-2 w-full;
+}
+.skeletonLineShort {
+  @apply h-4 bg-neutral-800 rounded w-1/3;
+}
+.skeletonLineLong {
+  @apply h-4 bg-neutral-800 rounded w-3/4;
+}
+.skeletonLineFull {
+  @apply h-4 bg-neutral-800 rounded w-full;
+}
+.loadMoreBtn {
+  @apply w-full rounded-xl border border-neutral-800 bg-[#202428] text-white py-4 font-bold transition-all hover:bg-[#2a2f34] mt-4;
+}
+
+/* --- AKCJE USUWANIA --- */
+.deleteBtn {
+  @apply text-red-500 hover:text-red-400 font-semibold text-sm transition-colors cursor-pointer;
+}
+.commentActionRow {
+  @apply flex items-center gap-3;
+}
+
+/* --- SCROLLBAR DLA KOMENTARZY --- */
+.commentsScrollArea {
+  @apply max-h-72 overflow-y-auto pr-2 flex flex-col gap-4;
+}
+.commentsScrollArea::-webkit-scrollbar {
+  @apply w-1.5;
+}
+.commentsScrollArea::-webkit-scrollbar-thumb {
+  @apply bg-neutral-700 rounded-full hover:bg-neutral-600;
+}
+
+/* --- MENU OPCJI (Edytuj/Usuń) --- */
+.menuBtn {
+  @apply text-gray-500 hover:text-white px-2 py-1 text-xl leading-none cursor-pointer;
+}
+.optionsMenu {
+  @apply absolute right-0 top-8 w-32 bg-[#202428] border border-neutral-800 rounded-xl shadow-xl z-10 flex flex-col overflow-hidden;
+}
+.menuItem {
+  @apply px-4 py-3 text-sm text-left text-white hover:bg-[#2a2f34] transition-colors cursor-pointer;
+}
+.menuItemDelete {
+  @apply text-red-500 hover:bg-red-500 hover:text-white;
+}
+
+/* --- TRYB EDYCJI --- */
+.editContainer {
+  @apply flex flex-col gap-3 w-full mt-2 mb-4;
+}
+.editSaveBtn {
+  @apply bg-yellow-400 text-black px-5 py-2 rounded-xl text-sm font-bold transition-all hover:bg-yellow-300;
+}
+.editCancelBtn {
+  @apply bg-[#2a2f34] text-white px-5 py-2 rounded-xl text-sm transition-colors hover:bg-neutral-700;
+}
+
+/* --- WYMUSZONE ANIMACJE PRZYCISKÓW I KART --- */
+@keyframes popHeart {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.35); }
+  100% { transform: scale(1); }
+}
+.animHeartPop {
+  animation: popHeart 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes clickSquish {
+  0% { transform: scale(1); }
+  40% { transform: scale(0.85); }
+  100% { transform: scale(1); }
+}
+.animSquish {
+  animation: clickSquish 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes slideDownIn {
+  0% { opacity: 0; transform: translateY(-20px) scale(0.98); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+.animNewPost {
+  animation: slideDownIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}

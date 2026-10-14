@@ -1,0 +1,112 @@
+# =========================
+
+# OS / Editor
+
+# =========================
+
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# =========================
+
+# ENV / Secrets
+
+# =========================
+
+.env
+.env.*
+!.env.example
+
+# =========================
+
+# Python / Django
+
+# =========================
+
+**pycache**/
+*.py[cod]
+*.sqlite3
+*.log
+
+venv/
+.venv/
+env/
+
+# Django
+
+staticfiles/
+media/
+*.pot
+*.pyc
+
+# =========================
+
+# Node / Next.js
+
+# =========================
+
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Next.js
+
+.next/
+out/
+
+# =========================
+
+# React Native / Expo
+
+# =========================
+
+.expo/
+.expo-shared/
+android/
+ios/
+*.keystore
+
+# =========================
+
+# Build / Dist
+
+# =========================
+
+dist/
+build/
+coverage/
+
+# =========================
+
+# Docker
+
+# =========================
+
+*.pid
+*.seed
+*.pid.lock
+
+# =========================
+
+# Logs
+
+# =========================
+
+logs/
+*.log
+
+# =========================
+
+# Misc
+
+# =========================
+
+*.swp
+*.swo
+*~
+docker-compose.override.yml
+package-lock.json

@@ -1,0 +1,27 @@
+### 1. Rejestracja nowego użytkownika
+POST http://localhost:8000/api/auth/register/
+Content-Type: application/json
+
+{
+  "username": "hotmama69",
+  "email": "test@gmail.com",
+  "password": "Hotmama.69",
+  "country": "PL",
+  "gender": "F",
+  "age": 45,
+  "height": 165,
+  "weight": 72
+}
+
+### 2. Logowanie (Pobranie tokenów)
+POST http://localhost:8000/api/token/
+Content-Type: application/json
+
+{
+  "username": "hotmama69",
+  "password": "Hotmama.69"
+}
+
+### 3. Próba pobrania ćwiczeń (Wymaga tokena z kroku 2!)
+GET http://localhost:8000/api/workouts/exercises/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc5Mjk5MjMyLCJpYXQiOjE3NzkyOTU2MzIsImp0aSI6IjZjOThkMmI0YzMzZjQ1ZTI4ODI1MjIwZDM0OGY3ZTIxIiwidXNlcl9pZCI6IjIifQ.L8xFpoMk-xqogLo_RUz1ViBAehANCRbeoR6l9k5VXBI
